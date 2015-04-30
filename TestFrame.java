@@ -18,10 +18,9 @@ public class TestFrame {
 			response = scan.nextLine().toUpperCase();
 			switch (response) {
 			case "1":
+				System.out.println("Starting new game.");
 				RunGame game = new RunGame();
-				game.initialiseDeck();
-				game.shuffleDeck();
-				game.printDeck();
+				game.newGame();
 				break;
 			case "2":
 				
@@ -56,13 +55,9 @@ public class TestFrame {
 		
 		 // prints out the contents of the deck in current
 							// order
-		TheFrame frame = new TheFrame();
+		
 
-		/*ArrayList<String> cardStrings = new ArrayList<String>();
-		for (int i = 0; game.Deck.size() > 0 && i < game.Deck.size(); i++) {
-			Card card = game.Deck.get(i);
-			cardStrings.add(card.getName() + ".gif");
-		}
+		/*
 		*/
 
 		//frame.cardDisplay(cardStrings);
