@@ -1,0 +1,59 @@
+/**
+ * @author Tom Doyle
+ */
+
+package guisucks;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Frame extends JFrame {
+	Panel testPanel;
+	
+	public Frame() {
+
+		super("Butt Game");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(new Dimension(600, 400)); // use setSize for frames.
+		testPanel  = new Panel();
+		Card card = new Card("3h", "Hearts", "3");
+		
+		add(testPanel, BorderLayout.CENTER);
+		
+		testPanel.addCard(card);
+		system.out.println(testPanel.getComponentCount());
+		setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+		Frame frame = new Frame();
+
+	}
+
+	private class Panel extends JPanel {
+		private Panel() {
+			setBackground(Color.yellow);
+			setLayout(new FlowLayout());
+		}
+		
+		private void addCard(Card card){
+			this.add(card);
+		}
+		@Override
+		public void paintComponent(Graphics g){
+			super.paintComponent(g);
+		}
+	}
+
+}

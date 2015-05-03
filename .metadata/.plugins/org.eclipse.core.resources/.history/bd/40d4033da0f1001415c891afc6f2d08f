@@ -1,0 +1,47 @@
+/**
+ * @author Tom Doyle
+ */
+
+package guisucks;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+public class Frame extends JFrame {
+	
+
+
+	public Frame() {
+		
+		super("Tom Game");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(new Dimension(600,400)); //use setSize for frames.
+		Panel testPanel = new Panel();
+		add(testPanel);
+		setVisible(true);
+	
+	}	
+	public static void main (String[] args)
+	{
+		Frame frame = new Frame();
+		
+	}
+	private class Panel extends JPanel{
+		private Panel(){
+		setBackground(Color.yellow);
+		setLayout(new FlowLayout());
+		}
+	}
+	private class Label extends JLabel{
+		String name;
+		ImageIcon icon = new ImageIcon("cards/" + name + ".gif");
+		this.setIcon(icon);
+	}
+}

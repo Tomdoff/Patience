@@ -1,0 +1,8 @@
+package guisucks;
+
+import javax.swing.JLabel;
+
+public class Card extends JLabel{
+	IconImage icon = new IconImage()
+
+}

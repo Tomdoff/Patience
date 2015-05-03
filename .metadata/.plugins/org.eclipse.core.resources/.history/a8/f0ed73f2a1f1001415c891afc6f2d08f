@@ -1,0 +1,17 @@
+package guisucks;
+
+import javax.swing.JLabel;
+
+public class Card extends JLabel{
+	String name;
+	String suit;
+	String value;
+	
+	public Card(String name, String suit, String value){
+		this.name = name;
+		this.suit = suit;
+		this.value = value;
+		IconImage icon = new IconImage()
+	}
+
+}
